@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 import { CarouselComponent } from './carousel.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { PortfolioComponent } from '../portfolio/portfolio.component';
 
 describe('CarouselComponent', () => {
   let component: CarouselComponent;
@@ -8,7 +12,14 @@ describe('CarouselComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CarouselComponent ]
+      imports: [
+        RouterTestingModule,
+        NgbModule
+      ],
+      declarations: [ 
+        CarouselComponent,
+        PortfolioComponent
+      ]
     })
     .compileComponents();
   }));
