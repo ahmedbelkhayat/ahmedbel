@@ -6,7 +6,7 @@ import { DisplaypicComponent } from './displaypic/displaypic.component';
 
 // To use the scrolling to some page
 const routerOptions: ExtraOptions = {
-  useHash: false,
+  useHash: true,
   anchorScrolling: 'enabled',
   scrollPositionRestoration: 'enabled',
 };
