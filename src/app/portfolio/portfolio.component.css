@@ -26,13 +26,3 @@
     }
 }
 
-@media (max-width: 767px)
-{
-    .block-single-image-text .right .second {
-        order : 2;
-    }
-    .block-single-image-text .right .second {
-        order : 1;
-    }
-
-}

@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FirstpageComponent } from './firstpage/firstpage.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { DisplaypicComponent } from './displaypic/displaypic.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { DisplaypicComponent } from './displaypic/displaypic.component';
     FirstpageComponent,
     PortfolioComponent,
     DisplaypicComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
