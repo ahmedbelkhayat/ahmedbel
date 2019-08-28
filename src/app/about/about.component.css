@@ -1,0 +1,36 @@
+@media (max-width: 991px)
+{
+    .blocks section{
+        padding: 25px 0;
+    }
+    .mobile {
+        display: block!important;
+    }
+    .desktop {
+        display: none;
+    }
+
+}
+
+ .mobile {
+    display: none;
+}
+
+
+@media (max-width: 2199px)
+{
+    .blocks section{
+        padding: 35px 0;
+    }
+}
+
+.block-main-image-text .img-container {
+    position :relative;
+    width: 100%;
+    background-size: cover !important;
+  /*  padding: 0 30px;*/
+
+}
+
+
+
