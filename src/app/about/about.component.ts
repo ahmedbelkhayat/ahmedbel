@@ -14,11 +14,6 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
 
   }
-  @HostListener('window:scroll', ['$event']) 
-  scrollHandler(event) {
-    console.debug("Scroll Event");
-    
-  }
 
 
 
