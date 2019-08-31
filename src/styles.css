@@ -214,6 +214,12 @@ span
   font-size : 1.2em;
   
 }
+.center {
+  display: inline-block;
+  margin: 0;
+  max-width: 90%;
+  vertical-align: middle;
+}
 
 
 .light {
