@@ -13,12 +13,6 @@
     .blocks section{
         padding: 15px 0;
     }
-    .mobile {
-        display: block!important;
-    }
-    .desktop {
-        display: none;
-    }
 
 }
 

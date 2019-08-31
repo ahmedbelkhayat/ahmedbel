@@ -83,6 +83,31 @@ html {
 
 }
 
+.img-container {
+  position :relative;
+  width: 100%;
+  background-size: cover !important;
+/*  padding: 0 30px;*/
+
+}
+
+.mobile {
+  display: none;
+}
+
+
+@media (max-width: 991px)
+{
+.mobile {
+  display: block!important;
+}
+.desktop {
+  display: none!important;
+}
+
+}
+
+
 .block-single-image-text .image-container {
   background-size : cover !important;
   height: 475px;
