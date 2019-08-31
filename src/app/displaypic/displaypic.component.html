@@ -1,4 +1,6 @@
 <div class="container-large">
+            <!--Section 
+
         <section>
             <div class="img-container mobile" style="background: url('../../assets/images/portrait/portraitCover.jpg'); height: 581px;">
 
@@ -7,11 +9,13 @@
             </div>
 
         </section>
+          -->
         <!--Section bouton-->
-        <section>
+        <section class="mt-5">
             <div class="container-fluid">
-                <div class="row mt-5 txt-center">
-                   <div class="col-md-8 offset-md-2">
+                <div class="row">
+                  <!--
+                   <div class="col-md-8 offset-md-2 desktop">
                         <h2>Portfolio</h2>
                         <div class="d-flex align-items-md-center justify-content-center">
                                 <button type="button" (click)="getAllPictures()" class="btn btn-primary">
@@ -35,12 +39,32 @@
             
                         </div>
               
-                    </div> 
+                   </div> 
+                   -->
+                   <div class="col-md-8 offset-md-2 txt-center margin-top-30">
+                        <h2>Portfolio</h2>
+                    </div>
+                   <div class="col-md-4 mr-4">
+                        <div ngbDropdown class="d-inline-block">
+                            <a class="btn" id="dropdownMenuLink" ngbDropdownToggle>
+                              Categorie
+                              <i class="fa fa-bars burger"></i>
+                            </a>
+                            <div ngbDropdownMenu aria-labelledby="dropdownMenuLink">
+                              <a class="dropdown-item" (click) ="getPicturesByCategory('portrait')">Portait</a>
+                              <a class="dropdown-item" (click) ="getPicturesByCategory('mariage')">Mariage</a>
+                              <a class="dropdown-item" (click) ="getPicturesByCategory('concert')">Concert</a>
+                              <a class="dropdown-item" (click) ="getPicturesByCategory('bn')">B&W</a>
+                              <a class="dropdown-item" (click) ="getAllPictures()">Tous</a>
+                            </div>
+                        </div>
+                    </div>
+    
                 </div>
             </div>
-                                                                  <!--Section Portfolio la c'est du serieux-->
-
         </section>
+                                                                          <!--Section Portfolio la c'est du serieux-->
+
         <section class="margin-top-30">
         <div class="row d-flex flex-wrap">
             <div *ngFor= "let picture of pictures" class="col-md-4 pic" [ngStyle]="{'background-image': 'url(' + picture.url + ')'}">

@@ -12,3 +12,21 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.dropdown-toggle::after{
+    display: none;
+  
+ }
+ .burger {
+   padding-left: 10px;
+   font-size: 1.4em;
+ }
+ .dropdown-menu {
+ -webkit-border-radius: 0 !important;
+ -moz-border-radius: 0 !important;
+      border-radius: 0 !important;
+ }
+ .dropdown-item{
+     font-size: 1.1em;
+ }
+ 
