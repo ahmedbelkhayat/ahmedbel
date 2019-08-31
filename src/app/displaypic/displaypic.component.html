@@ -1,6 +1,6 @@
 <div class="container-large">
         <section>
-            <div class="img-container desktop" style="background: url('../../assets/images/portrait/portraitCover.jpg'); height: 581px;">
+            <div class="img-container mobile" style="background: url('../../assets/images/portrait/portraitCover.jpg'); height: 581px;">
 
             </div>
             <div class="img-container mobile" style="background: url('../../assets/images/portrait/portrait14Mobile.jpg'); height: 581px;">
@@ -14,21 +14,25 @@
                    <div class="col-md-8 offset-md-2">
                         <h2>Portfolio</h2>
                         <div class="d-flex align-items-md-center justify-content-center">
-                                <button type="button" class="btn btn-primary">
+                                <button type="button" (click)="getAllPictures()" class="btn btn-primary">
                                     Tous
                                 </button>
-                                <button type="button" class="btn btn-primary">
+                                <button type="button" (click)="getPicturesByCategory('portrait')" class="btn btn-primary">
                                    Portait
                                 </button>
-                                <button type="button" class="btn btn-primary">
+                                <button type="button" (click)="getPicturesByCategory('mariage')" class="btn btn-primary">
                                    Mariage
                                 </button>
-                                <button type="button" class="btn btn-primary">
-                                   Concert
+                                <button type="button" (click)="getPicturesByCategory('bn')" class="btn btn-primary">
+                                   B&N
                                  </button>
-                                 <button type="button" class="btn btn-primary">
-                                    Paysage
+                                 <button type="button" (click)="getPicturesByCategory('concert')" class="btn btn-primary">
+                                     Concert
+                                 </button>   
+                                 <button type="button" (click)="getPicturesByCategory('film')" class="btn btn-primary">
+                                        Film
                                  </button>            
+            
                         </div>
               
                     </div> 
@@ -37,8 +41,11 @@
                                                                   <!--Section Portfolio la c'est du serieux-->
 
         </section>
-        <section>
-
+        <section class="margin-top-30">
+        <div class="row d-flex flex-wrap">
+            <div *ngFor= "let picture of pictures" class="col-md-4 pic" [ngStyle]="{'background-image': 'url(' + picture.url + ')'}">
+            </div>
+        </div>
         </section>
 
         <!--
