@@ -18,12 +18,37 @@ padding-top: 50px;
 html {
   scroll-behavior: smooth;
 }
+/* -------------------------------------------------------------------------- */
+/*                                 MARGIN                                     */
+/* -------------------------------------------------------------------------- */
+@media(max-width:2199px){
 .padding-top-30 {
   padding-top : 30px;
 }
 .margin-top-100 {
   margin-top : 100px;
+  }
 }
+.margin-top-30 {
+  margin-top : 30px;
+  }
+
+
+@media(max-width:769px){
+  .padding-top-30 {
+    padding-top : 20px;
+  }
+  .margin-top-100 {
+    margin-top : 50px;
+    }
+    .margin-top-30 {
+      margin-top : 10px;
+      }
+    
+  
+}
+
+
 /* -------------------------------------------------------------------------- */
 /*                                 IMAGES                                     */
 /* -------------------------------------------------------------------------- */
@@ -46,6 +71,61 @@ html {
     }
    
 }
+
+@media (max-width: 767px)
+{
+    .block-single-image-text .second {
+        order : 2;
+    }
+    .block-single-image-text .first {
+        order : 1;
+    }
+
+}
+
+.img-container {
+  position :relative;
+  width: 100%;
+  background-size: cover !important;
+/*  padding: 0 30px;*/
+
+}
+
+.mobile {
+  display: none;
+}
+
+
+@media (max-width: 991px)
+{
+.mobile {
+  display: block!important;
+}
+.desktop {
+  display: none!important;
+}
+
+}
+
+
+.block-single-image-text .image-container {
+  background-size : cover !important;
+  height: 475px;
+}
+.contactEnv {
+  height: 150px;
+  width :150px;
+  background-image: url('./assets/images/whitenv.png');
+  background-size: cover;
+  cursor: pointer;
+  margin: auto;
+}
+.contactEnv:hover{
+  background-image: url('./assets/images/openEnve.png');
+
+}
+
+
 /* -------------------------------------------------------------------------- */
 /*                                 TEXTES                                      */
 /* -------------------------------------------------------------------------- */
@@ -60,24 +140,75 @@ h1,h2 {
   font-family: 'Montserrat', sans-serif;
 
 }
-h2
-{
-  font-size: 1.80em;
-  padding : 30px 0;
-	font-weight: normal;
+ h2 {
+  width: auto;
+  padding: 0px!important;
+  font-size:6vw!important;
+  font-weight:400!important;
+  line-height:1.2!important;
+  letter-spacing:-.1px!important;
+  margin-bottom:.5em!important;
+  position: relative;
+  margin-top:.5em !important;
+
 }
+.tiret:after{
+  content:"";
+  width:35px;
+  height:3px;
+  background-color:#232323;
+  position:absolute;
+  bottom:-.6em;
+  left:4px;
+  display: none;
+}
+
+p {
+  font-size: 4vw;
+  font-weight: 200;
+  line-height: 1.5;
+  letter-spacing: -.1px;
+  width: 100%;
+  margin-top: 1em;
+}
+.smallp {
+  font-weight: 200;
+  line-height: 1.5;
+  font-size: 4vw;
+
+
+}
+
+@media (min-width: 47.5em){
+  .smallp {
+     font-size: 1.3vw;
+     width: auto;
+ }}
+@media (min-width: 47.5em){
+  h2 {
+    font-size: 3vw!important;
+    margin-bottom:0.8em!important;
+  }}
+
+  @media (min-width: 47.5em){
+    .tiret:after {
+  display: block;    
+}}
+  
+ 
+ @media (min-width: 47.5em){
+  p {
+    font-size:1.5vw;
+     width: auto;
+ }}
+
+
 .block-title{
   font-size : 16px;
   line-height: 23px;
   padding-bottom: 20px;
 }
-p 
-{
-  font-size: 16px;
-	line-height: 22px;
-  margin: 0;
 
-}
 span 
 {
   font-size : 1.2em;
@@ -106,12 +237,15 @@ span
   .txt-justify {
     text-align: justify;
   }
+  .trait {
+    border :1px solid #232323;
+  }
   
   /* -------------------------------------------------------------------------- */
 /*                                 BOUTTONS                                   */
 /* -------------------------------------------------------------------------- */
 .btn-more {
-  margin-top : 35px;
+  margin-top : 20px;
 }
 @media (max-width: 2199px)
 {
@@ -126,7 +260,7 @@ span
 
 .btn.btn-primary
 {
-  color : black; 
+  color :#232323; 
   background-color: transparent !important;
   border : 1px solid #a3a3a3 !important;
   text-transform: uppercase;
@@ -154,7 +288,7 @@ span
   transition: 0.5s;
 }
 .btn.btn-primary:hover {
-  background-color: black!important;
+  background-color: #232323!important;
 }
 
 .btn:hover span {
@@ -181,18 +315,3 @@ span
 
 
 
-@media (max-width: 767px)
-{
-    .block-single-image-text .right .second {
-        order : 2;
-    }
-    .block-single-image-text .right .second {
-        order : 1;
-    }
-
-}
-
-.block-single-image-text .image-container {
-  background-size : cover !important;
-  height: 475px;
-}

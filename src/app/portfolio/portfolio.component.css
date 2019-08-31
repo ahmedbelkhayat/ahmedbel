@@ -17,18 +17,6 @@
 
  
 }
-.contactEnv {
-    height: 150px;
-    width :150px;
-    background-image: url('../../assets/images/whitenv.png');
-    background-size: cover;
-    cursor: pointer;
-    margin: auto;
-}
-.contactEnv:hover{
-    background-image: url('../../assets/images/openEnve.png');
-
-}
 
 q { quotes: '\201c' '\201d'; }
 q:before { content: open-quote; }
