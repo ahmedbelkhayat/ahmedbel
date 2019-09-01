@@ -120,7 +120,7 @@ html {
   cursor: pointer;
   margin: auto;
 }
-.contactEnv:hover{
+.contactLink:hover .contactEnv{
   background-image: url('./assets/images/openEnve.png');
 
 }

@@ -8,6 +8,33 @@
 }
 .pic {
     padding: 0 !important;
+    position:relative;
+    transition:.3s;
+
+  }
+  .pic img {
+    transition:.3s;
+  }
+
+
+   .pic:hover img{
+   /* filter:blur(2px) brightness(60%);*/
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
+  }
+   
+  .pic :not(img){
+    position:absolute;
+    z-index:1;
+    top:30%;
+    width:100%;
+    text-align:center;
+    color:#fff;
+    opacity:0;
+    transition:.3s;
+  }
+  .pic:hover :not(img){
+    opacity:1;
   }
 
 .dropdown-toggle::after{

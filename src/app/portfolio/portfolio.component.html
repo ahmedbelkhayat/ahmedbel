@@ -41,7 +41,7 @@
                             pour un concert de jazz. Enjoy
                         </p>
                         </span>
-                        <a class="btn btn-primary btn-more"  (click)="getCategory('concert')"><span>Voir plus</span></a>           
+                        <a class="btn btn-primary btn-more"  routerLink='/portfolio' [queryParams]="{category:'concert'}"><span>Voir plus</span></a>           
                 </div>
                 <div class="col-md-6 offset-sm-1 col-sm-7 first">
                     <div class="image-container" style="background: url('../../assets/images/jazz/concert4.JPG') no-repeat center"></div>
@@ -59,7 +59,7 @@
                                 Je peux en photo aussi bien les adultes que les enfants. N'hesitez pas a me contacter
                             </p>
                             </span>
-                            <a class="btn btn-primary btn-more"  (click)="getCategory('portrait')"><span>Voir plus</span></a>           
+                            <a class="btn btn-primary btn-more"  routerLink='/portfolio' [queryParams]="{category:'portrait'}"><span>Voir plus</span></a>           
                     </div>
         
                 </div>
@@ -72,7 +72,7 @@
                             Je vous laisse decouvrir les photos d'un mariage
                         </p>
                         </span>
-                        <a class="btn btn-primary btn-more" (click)= "getCategory('mariage')"><span>Voir plus</span></a>           
+                        <a class="btn btn-primary btn-more" routerLink='/portfolio' [queryParams]="{category:'mariage'}"><span>Voir plus</span></a>           
                 </div>
                 <div class="col-md-6 offset-sm-1 col-sm-7 first">
                     <div class="image-container" style="background: url('../../assets/images/mariage/mariage.jpg') no-repeat center"></div>
@@ -88,10 +88,11 @@
                     <div class="col-12 align-item-md-center">
                        <h2>Contact</h2>
                        <p id="contact" class="light"> <q>Restons en contact, contactez moi ci-dessous pour toute demande </q> </p>
-                        <div class="contactEnv">  
-                            <a> 
-                            </a>
+                       <a class="contactLink"> 
+                         <div class="contactEnv">  
+                          
                          </div>
+                        </a>
                     </div>
                 </div>
                 </div>              
