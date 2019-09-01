@@ -1,64 +1,28 @@
 <div class="container-large">
-            <!--Section 
-
-        <section>
-            <div class="img-container mobile" style="background: url('../../assets/images/portrait/portraitCover.jpg'); height: 581px;">
-
-            </div>
-            <div class="img-container mobile" style="background: url('../../assets/images/portrait/portrait14Mobile.jpg'); height: 581px;">
-            </div>
-
-        </section>
-          -->
         <!--Section bouton-->
         <section class="mt-5">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
-                  <!--
-                   <div class="col-md-8 offset-md-2 desktop">
-                        <h2>Portfolio</h2>
-                        <div class="d-flex align-items-md-center justify-content-center">
-                                <button type="button" (click)="getAllPictures()" class="btn btn-primary">
-                                    Tous
-                                </button>
-                                <button type="button" (click)="getPicturesByCategory('portrait')" class="btn btn-primary">
-                                   Portait
-                                </button>
-                                <button type="button" (click)="getPicturesByCategory('mariage')" class="btn btn-primary">
-                                   Mariage
-                                </button>
-                                <button type="button" (click)="getPicturesByCategory('bn')" class="btn btn-primary">
-                                   B&N
-                                 </button>
-                                 <button type="button" (click)="getPicturesByCategory('concert')" class="btn btn-primary">
-                                     Concert
-                                 </button>   
-                                 <button type="button" (click)="getPicturesByCategory('film')" class="btn btn-primary">
-                                        Film
-                                 </button>            
-            
-                        </div>
-              
-                   </div> 
-                   -->
-                   <div class="col-md-8 offset-md-2 txt-center margin-top-30">
-                        <h2>Portfolio</h2>
+                    <div class="col-md-4 menuB">
+                                <div ngbDropdown class="d-inline-block">
+                                    <a class="btn" id="dropdownMenuLink" ngbDropdownToggle>
+                                      Categorie
+                                      <i class="fa fa-bars burger"></i>
+                                    </a>
+                                    <div ngbDropdownMenu aria-labelledby="dropdownMenuLink">
+                                      <a class="dropdown-item" (click) ="getPicturesByCategory('portrait')">Portrait</a>
+                                      <a class="dropdown-item" (click) ="getPicturesByCategory('mariage')">Mariage</a>
+                                      <a class="dropdown-item" (click) ="getPicturesByCategory('concert')">Concert</a>
+                                      <a class="dropdown-item" (click) ="getPicturesByCategory('bn')">B&W</a>
+                                      <a class="dropdown-item" (click) ="getPicturesByCategory('paysage')">Paysage</a>
+                                      <a class="dropdown-item" (click) ="getAllPictures()">Tous</a>
+                                    </div>
+                                </div>
+                   </div>
+                   <div class="col-md-4">
+                        <h2 class="txt-center">Portfolio</h2>
                     </div>
-                   <div class="col-md-4 mr-4">
-                        <div ngbDropdown class="d-inline-block">
-                            <a class="btn" id="dropdownMenuLink" ngbDropdownToggle>
-                              Categorie
-                              <i class="fa fa-bars burger"></i>
-                            </a>
-                            <div ngbDropdownMenu aria-labelledby="dropdownMenuLink">
-                              <a class="dropdown-item" (click) ="getPicturesByCategory('portrait')">Portait</a>
-                              <a class="dropdown-item" (click) ="getPicturesByCategory('mariage')">Mariage</a>
-                              <a class="dropdown-item" (click) ="getPicturesByCategory('concert')">Concert</a>
-                              <a class="dropdown-item" (click) ="getPicturesByCategory('bn')">B&W</a>
-                              <a class="dropdown-item" (click) ="getAllPictures()">Tous</a>
-                            </div>
-                        </div>
-                    </div>
+
     
                 </div>
             </div>
@@ -66,75 +30,11 @@
                                                                           <!--Section Portfolio la c'est du serieux-->
 
         <section class="margin-top-30">
-        <div class="row d-flex flex-wrap">
-            <div *ngFor= "let picture of pictures" class="col-md-4 pic" [ngStyle]="{'background-image': 'url(' + picture.url + ')'}">
+        <div class="row d-flex  flex-wrap align-content-stretch">
+            <div *ngFor= "let picture of pictures" class="col-lg-4 pic">
+             <img  class="img-fluid" src="{{picture.url}}">
             </div>
         </div>
         </section>
 
-        <!--
-        <div class="row d-flex flex-wrap mt-5 justify-content-around images">
-            <div class="col-md-4  padding-top-30">
-                <div class="card" style="width: auto; ">
-                    <img src= "../../assets/images/nature.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h3 class="card-title light">Nature</h3>
-                        <p class="card-text light">Here you could see a preview of landscape and nature photography</p>
-                        <a href="#" class="btn btn-primary"><span>Discover</span></a>
-                    </div>
-                </div>
-            </div>  
-            <div class="col-md-4  padding-top-30">
-                <div class="card" style="width: auto; ">
-                    <img src= "../../assets/images/mariage2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h3 class="card-title light">Wedding</h3>
-                        <p class="card-text light">Here you could see a preview of landscape and nature photography</p>
-                        <a href="#" class="btn btn-primary"><span>Discover</span></a>
-                    </div>
-                </div>
-            </div>  
-            <div class="col-md-4 padding-top-30">
-                <div class="card" style="width: auto; ">
-                    <img src= "../../assets/images/lady.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h3 class="card-title light">Portrait</h3>
-                        <p class="card-text light">Here you could see a preview of landscape and nature photography</p>
-                        <a href="#" class="btn btn-primary"><span>Discover</span></a>
-                    </div>
-                </div>
-            </div>    
-            <div class="col-md-4 padding-top-30">
-                    <div class="card" style="width: auto; ">
-                        <img src= "../../assets/images/landscape.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h3 class="card-title light">LANDSCAPE</h3>
-                            <p class="card-text light">Here you could see a preview of landscape and nature photography</p>
-                            <a href="#" class="btn btn-primary"><span>Discover</span></a>
-                        </div>
-                    </div>
-            </div> 
-            <div class="col-md-4 padding-top-30">
-                    <div class="card" style="width: auto; ">
-                        <img src= "../../assets/images/caty.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h3 class="card-title light">ARTY</h3>
-                            <p class="card-text light">Here you could see a preview of landscape and nature photography</p>
-                            <a href="#" class="btn btn-primary"><span>Discover</span></a>
-                        </div>
-                    </div>
-            </div>
-            <div class="col-md-4 padding-top-30">
-                    <div class="card" style="width: auto; ">
-                        <img src= "../../assets/images/fragilesquare.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h3 class="card-title light">Black and white</h3>
-                            <p class="card-text light">Here you could see a preview of landscape and nature photography</p>
-                            <a href="#" class="btn btn-primary"><span>Discover</span></a>
-                        </div>
-                    </div>
-            </div>       
-       
-        </div>
-        -->
 </div>
