@@ -30,9 +30,10 @@
                                                                           <!--Section Portfolio la c'est du serieux-->
 
         <section class="margin-top-30">
-        <div class="row d-flex  flex-wrap align-content-stretch">
+        <div class="row d-flex  flex-wrap">
             <div *ngFor= "let picture of pictures" class="col-lg-4 pic">
              <img  class="img-fluid" src="{{picture.url}}">
+             <h2>{{picture.name}}</h2>
             </div>
         </div>
         </section>
