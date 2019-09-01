@@ -7,11 +7,8 @@
     transition: opacity 300ms ease-in-out;
 }
 .pic {
-    height: 600px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+    padding: 0 !important;
+  }
 
 .dropdown-toggle::after{
     display: none;
@@ -29,4 +26,13 @@
  .dropdown-item{
      font-size: 1.1em;
  }
- 
+
+ .menuB {
+   margin-top :.5em !important;
+   margin-top:4em !important;
+
+ }
+ @media (min-width: 47.5em){
+    .menuB {
+        margin-top:4em !important;
+    }}
