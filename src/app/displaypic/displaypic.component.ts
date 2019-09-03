@@ -3,20 +3,29 @@ import { PicturesService } from '../pictures.service';
 import { Picture } from '../picture';
 import { NgbDropdown} from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute } from '@angular/router';
+import { writeSync } from 'fs';
+import { Alert } from 'selenium-webdriver';
+
 
 
 @Component({
   selector: 'lw-displaypic',
   templateUrl: './displaypic.component.html',
-  styleUrls: ['./displaypic.component.css']
+  styleUrls: ['./displaypic.component.css'],
+
 })
 export class DisplaypicComponent implements OnInit {
    pictures : Picture[];
    categoryFormFirst:string;
+   openModal = false;
+   title:string;
+
   constructor(private prictureService:PicturesService,private route: ActivatedRoute) {
     this.route.queryParams.subscribe(params => {
     this.categoryFormFirst = params['category']
-   });}
+   });
+  
+    }
 
   ngOnInit() {
     if(this.categoryFormFirst ==null){
@@ -35,6 +44,21 @@ export class DisplaypicComponent implements OnInit {
     this.prictureService.getPicturesByCateroy(category).subscribe(pictures => this.pictures = pictures);
 
   }
+  open():void {
+    this.openModal = true;
+  }
+
+  close():void{
+    this.openModal = false;
+
+  }
+  changeTitle(picture:Picture):void {
+    this.title = picture.name
+    console.log(picture.name)
+    alert(picture.name)
+    
+  }
+
   
 
 }

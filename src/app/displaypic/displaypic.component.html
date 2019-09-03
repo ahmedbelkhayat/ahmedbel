@@ -1,9 +1,9 @@
 <div class="container-large">
         <!--Section bouton-->
         <section class="mt-5">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-4 menuB">
+                    <div class="col-md-1 menuB">
                                 <div ngbDropdown class="d-inline-block">
                                     <a class="btn" id="dropdownMenuLink" ngbDropdownToggle>
                                       Categorie
@@ -19,9 +19,24 @@
                                     </div>
                                 </div>
                    </div>
+              
+                  <div class="col-md-1">
+                      <!--        <h2>{{picture.name}}</h2> -->                     
+                  </div>
+                   <div class="col-md-8 ml-auto mr-auto desktop">
+                      <ngb-carousel> 
+                          <ng-template ngbSlide *ngFor= "let picture of pictures" >
+                            <div class="picsum-img-wrapper" >
+                              <img class="img-fluid w-100 pict" src="{{picture.url}}" alt="First slide">
+                            </div>
+                          </ng-template>
+                      </ngb-carousel>             
+                   </div>
+                   <!--A voir                   
                    <div class="col-md-4">
                         <h2 class="txt-center">Portfolio</h2>
                     </div>
+                  -->
 
     
                 </div>
@@ -29,7 +44,7 @@
         </section>
                                                                           <!--Section Portfolio la c'est du serieux-->
 
-        <section class="margin-top-30">
+        <section class="margin-top-30 mobile">
         <div class="row d-flex  flex-wrap">
             <div *ngFor= "let picture of pictures" class="col-lg-4 pic">
              <img  class="img-fluid" src="{{picture.url}}">
@@ -37,5 +52,26 @@
             </div>
         </div>
         </section>
+
+        <section class="desktop">
+          <div class="container-fluid">
+          </div>       
+        </section>
+ <!--                 
+       <section class="customModal" [ngClass]="{'open':openModal}">
+          <div class="modCont">
+              <span (click)="close()" class="close">&times;</span>
+              <ngb-carousel interval class="margin-top-30"> 
+                  <ng-template ngbSlide *ngFor= "let picture of pictures" >
+                    <div class="picsum-img-wrapper" >
+                      <img class="img-fluid w-100" src="{{picture.url}}" alt="First slide">
+                    </div>
+                  </ng-template>
+              </ngb-carousel>          
+            </div>
+          </section> 
+-->
+                  
+              
 
 </div>
