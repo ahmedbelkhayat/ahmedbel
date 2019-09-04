@@ -3,8 +3,6 @@ import { PicturesService } from '../pictures.service';
 import { Picture } from '../picture';
 import { NgbDropdown} from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute } from '@angular/router';
-import { writeSync } from 'fs';
-import { Alert } from 'selenium-webdriver';
 
 
 
